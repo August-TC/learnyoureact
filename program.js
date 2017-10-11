@@ -40,7 +40,7 @@ app.use('/bundle.js',function(req,res){
 
 app.use('/', function(req, res) {
     var initialData = JSON.stringify(data);
-    var markup = ReactDOMServer.renderToString(React.createElement(TodoBox, {data: data}));
+    var markup = ReactDOMServer.renderToStaticMarkup(React.createElement(TodoBox, {data: data}));
 
     res.setHeader('Content-Type', 'text/html');
 
